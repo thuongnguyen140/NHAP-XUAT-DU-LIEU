@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <P>
+    <h2>Caculator </h2>
+    </P><br>
+    <table>
+        <input id="sothunhat" type="number">
+        <input id="sothuhai" type="number"><br><br>
+        <button type="button" onclick="tong()">Cộng</button>
+        <button type="button" onclick="hieu()">Trừ</button>
+        <button type="button" onclick="tich()">Nhân</button>
+        <button type="button" onclick="thuong()">Chia</button><br>
+        <label id="ketquatong" style="color: rgb(255, 0, 0);background-color: chartreuse;"></label><br>
+        <label id="ketquahieu" style="color: darkblue; background-color: darksalmon;"></label><br>
+        <label id="ketquatich" style="color: darkslateblue; background-color: gold;"></label><br>
+        <label id ="ketquathuong" style="color: papayawhip; background-color: black;"></label><br>
+
+    </table>
+</body>
+<script>
+    function tong() {
+        let so1 = Number(document.getElementById("sothunhat").value)
+        let so2 = Number(document.getElementById("sothuhai").value)
+        let tong = so1 + so2
+        let ketquatong = "Tổng 2 số là: " + tong
+        document.getElementById("ketquatong").innerHTML = ketquatong
+        console.log(tong)
+    }
+
+    function hieu() {
+        let so1 = Number(document.getElementById("sothunhat").value)
+        let so2 = Number(document.getElementById("sothuhai").value)
+        let hieu = so1 - so2
+        let ketquahieu = "Hiệu 2 số là: " + hieu
+        document.getElementById("ketquahieu").innerHTML = ketquahieu
+        console.log(hieu)
+    }
+    function tich() {
+        let so1 = Number(document.getElementById("sothunhat").value)
+        let so2 = Number(document.getElementById("sothuhai").value)
+        let tich = so1 * so2
+        let ketquatich = "Tích 2 số là: " + tich
+        document.getElementById("ketquatich").innerHTML = ketquatich
+        console.log(tich)
+    }
+    function thuong() {
+        let so1 = Number(document.getElementById("sothunhat").value)
+        let so2 = Number(document.getElementById("sothuhai").value)
+        let thuong= so1 / so2
+        let ketquathuong= "Thương 2 số là: " + thuong
+        document.getElementById("ketquathuong").innerHTML = ketquathuong
+        console.log(thuong)
+    }
+
+</script>
+
+</html>
